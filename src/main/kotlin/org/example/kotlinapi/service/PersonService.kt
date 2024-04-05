@@ -1,8 +1,8 @@
-package org.example.kotlinapi.controller.service
+package org.example.kotlinapi.service
 
 import lombok.RequiredArgsConstructor
-import org.example.kotlinapi.controller.model.Person
-import org.example.kotlinapi.controller.repository.PersonRepository
+import org.example.kotlinapi.model.Person
+import org.example.kotlinapi.repository.PersonRepository
 import org.springframework.stereotype.Service
 
 

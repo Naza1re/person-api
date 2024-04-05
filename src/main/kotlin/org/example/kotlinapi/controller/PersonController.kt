@@ -1,8 +1,8 @@
-package org.example.kotlinapi.controller.controller
+package org.example.kotlinapi.controller
 
 import lombok.RequiredArgsConstructor
-import org.example.kotlinapi.controller.model.Person
-import org.example.kotlinapi.controller.service.PersonService
+import org.example.kotlinapi.model.Person
+import org.example.kotlinapi.service.PersonService
 import org.springframework.web.bind.annotation.*
 
 
@@ -14,12 +14,12 @@ class PersonController(
 ){
 
     @GetMapping("/{id}")
-    fun getById(@PathVariable("id") id:Long):Person{
+    fun getById(@PathVariable("id") id:Long): Person {
         return service.findById(id);
     }
 
     @PostMapping
-    fun create(@RequestBody person:Person):Person{
+    fun create(@RequestBody person: Person): Person {
         return service.save(person);
     }
 }

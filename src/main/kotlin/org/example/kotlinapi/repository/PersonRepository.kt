@@ -1,6 +1,6 @@
-package org.example.kotlinapi.controller.repository
+package org.example.kotlinapi.repository
 
-import org.example.kotlinapi.controller.model.Person
+import org.example.kotlinapi.model.Person
 import org.springframework.data.jpa.repository.JpaRepository
 
 interface PersonRepository : JpaRepository<Person, Long> {

@@ -1,4 +1,4 @@
-package org.example.kotlinapi.controller.model
+package org.example.kotlinapi.model
 
 import jakarta.persistence.*
 
