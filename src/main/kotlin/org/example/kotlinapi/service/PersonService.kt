@@ -11,4 +11,5 @@ interface PersonService {
     fun deleteById(personId: Long)
 
     fun save(person: Person): PersonResponse
+    fun updatePerson(id: Long, person: Person) : PersonResponse
 }

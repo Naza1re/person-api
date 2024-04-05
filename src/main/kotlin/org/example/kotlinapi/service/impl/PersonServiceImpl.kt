@@ -27,5 +27,11 @@ class PersonServiceImpl(private var repository: PersonRepository, private var ma
         return mapper.fromEntityToResponse(repository.save(person))
     }
 
+    override fun updatePerson(id: Long, person: Person) : PersonResponse {
+        val dbperson = repository.findById(id).get()
+        person.id = dbperson.id
+        return mapper.fromEntityToResponse(repository.save(person))
+    }
+
 
 }
