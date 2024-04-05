@@ -34,4 +34,9 @@ class PersonController(
         return service.updatePerson(id, person);
     }
 
+    @GetMapping
+    fun findAll(): List<PersonResponse> {
+        return service.findAll()
+    }
+
 }

@@ -12,4 +12,5 @@ interface PersonService {
 
     fun save(person: Person): PersonResponse
     fun updatePerson(id: Long, person: Person) : PersonResponse
+    fun findAll(): List<PersonResponse>
 }

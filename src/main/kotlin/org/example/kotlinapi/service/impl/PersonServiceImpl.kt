@@ -33,5 +33,9 @@ class PersonServiceImpl(private var repository: PersonRepository, private var ma
         return mapper.fromEntityToResponse(repository.save(person))
     }
 
+    override fun findAll(): List<PersonResponse> {
+        return repository.findAll().map { mapper.fromEntityToResponse(it) }
+    }
+
 
 }
