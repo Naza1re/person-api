@@ -3,6 +3,7 @@ package org.example.kotlinapi.controller
 import lombok.RequiredArgsConstructor
 import org.example.kotlinapi.model.Person
 import org.example.kotlinapi.service.PersonService
+import org.example.kotlinapi.service.impl.PersonServiceImpl
 import org.springframework.web.bind.annotation.*
 
 
@@ -22,4 +23,10 @@ class PersonController(
     fun create(@RequestBody person: Person): Person {
         return service.save(person);
     }
+
+    @DeleteMapping("/{id}")
+    fun delete(@PathVariable("id") id:Long) {
+        return service.deleteById(id);
+    }
+
 }
