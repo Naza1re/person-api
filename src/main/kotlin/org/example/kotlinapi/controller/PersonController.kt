@@ -1,6 +1,8 @@
 package org.example.kotlinapi.controller
 
 import lombok.RequiredArgsConstructor
+import org.example.kotlinapi.dto.PersonRequest
+import org.example.kotlinapi.dto.PersonResponse
 import org.example.kotlinapi.model.Person
 import org.example.kotlinapi.service.PersonService
 import org.example.kotlinapi.service.impl.PersonServiceImpl
@@ -15,12 +17,12 @@ class PersonController(
 ){
 
     @GetMapping("/{id}")
-    fun getById(@PathVariable("id") id:Long): Person {
+    fun getById(@PathVariable("id") id:Long): PersonResponse {
         return service.findById(id);
     }
 
     @PostMapping
-    fun create(@RequestBody person: Person): Person {
+    fun create(@RequestBody person: Person): PersonResponse {
         return service.save(person);
     }
 
